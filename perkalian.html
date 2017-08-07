@@ -1,0 +1,51 @@
+<html>
+<head>
+</head>
+<body>
+<div id="content">
+
+ <table>
+ <div id="inputa">
+ <p> Volume/Lot </p>
+ <input type="text" name="harga" id="harga" class="a2" onkeyup="hitung2();" required="" size="40" onkeypress="return isNumberKey(event)" >
+ </div>
+ 
+ <div id="inputa">
+ <p> Direct Member: </p>
+ <input type="text" name="jumlah" id="jumlah" class="b2" onkeyup="hitung2();" required="" size="40" onkeypress="return isNumberKey(event)" >
+ </div>
+ <div id="inputa">
+ <p> Total dalam Dolar $: </p>
+ <input type="text" name="total" id="total" class="c2" readonly size="40">
+ </div>
+ </div>
+ </table>
+ <input type="submit" name="submit" id="submit" Value="Submit">
+ </form>
+</div>
+</div>
+</body>
+</html>
+
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<script>
+function hitung2() {
+var a = $(".a2").val();
+var x = $(".b2").val();
+var b = 5; // $5/lot
+
+c = a * b; //a kali b
+c = x * c;
+//c = a * x * 5;
+$(".c2").val(c);
+}
+/*buat validasi angka*/
+/*function isNumberKey(evt){
+ var charCode = (evt.which) ? evt.which : event.keyCode;
+ if (charCode != 46 && charCode > 31 && (charCode < 48 || charCode > 57))
+ return false;
+ return true;
+}*/
+</script>
